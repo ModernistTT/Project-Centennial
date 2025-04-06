@@ -6,19 +6,12 @@ This class defines the PIDProfile, a class that contains all necessary values fo
 */
 
 #include "PIDProfile.h"
-#include "cmath"
 
-PIDProfile::PIDProfile(float kP, float kI, float kD) {
-    m_kP = kP;
-    m_kI = kI;
-    m_kD = kD;
-}
+PIDProfile::PIDProfile(float kP, float kI, float kD)
+    : m_kP(kP), m_kI(kI), m_kD(kD), m_maxInput(0.0f), m_minInput(0.0f) {}
 
-PIDProfile::PIDProfile(float kP, float kI, float kD, float maxInput, float minInput) {
-    m_kP = kP;
-    m_kI = kI;
-    m_kD = kD;
-}
+PIDProfile::PIDProfile(float kP, float kI, float kD, float maxInput, float minInput)
+    : m_kP(kP), m_kI(kI), m_kD(kD), m_maxInput(maxInput), m_minInput(minInput) {}
 
 float PIDProfile::getkP() {
     return m_kP;

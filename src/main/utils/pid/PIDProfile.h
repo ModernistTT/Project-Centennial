@@ -9,9 +9,10 @@ This class defines the PIDProfile, a class that contains all necessary values fo
 
 class PIDProfile {
     public:
+        PIDProfile();
         PIDProfile(float kP, float kI, float kD);
-        // TBI
-        PIDProfile(float kP, float kI, float kD, float maxValue, float minValue);
+        //TBI
+        PIDProfile(float kP, float kI, float kD, float maxInput, float minInput);
 
         float getkP();
         float getkI();

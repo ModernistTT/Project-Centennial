@@ -7,6 +7,8 @@ This class provides PID (Proportional, Integral, Derivative) control for the roc
 
 #pragma once
 
+#include "Arduino.h"
+
 #include "PIDProfile.h"
 
 class PID {

@@ -7,12 +7,10 @@ This class provides PID (Proportional, Integral, Derivative) control for the roc
 
 #include "PID.h"
 
-PID::PID(PIDProfile profile) : _profile(profile) {
-    _profile = profile;
-}
+PID::PID(PIDProfile profile) : _profile(profile) {}
 
 float PID::calculate(float setpoint, float measured) {
-    currentTime = 0.0f;
+    currentTime = micros();
     deltaTime = (currentTime - lastTime) / 1000000.0f;
 
     // Calculate proportional
