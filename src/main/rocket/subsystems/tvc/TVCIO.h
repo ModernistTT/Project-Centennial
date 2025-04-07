@@ -4,6 +4,7 @@
 
 #include "Servo.h"
 #include "HardwareDevices.h"
+#include "Angle.h"
 
 
 class TVCIO {
