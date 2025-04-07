@@ -1,11 +1,8 @@
-#pragma once
-
 #include "Arduino.h"
 
 #include "Servo.h"
-#include "HardwareDevices.h"
-#include "Angle.h"
-
+#include "../constants/HardwareDevices.h"
+#include "../../../utils/units/angle/Angle.h"
 
 class TVCIO {
     public:

@@ -5,8 +5,6 @@ Comments:
 This class provides PID (Proportional, Integral, Derivative) control for the rocket Thrust Vectoring System (TVCS.)
 */
 
-#pragma once
-
 #include "Arduino.h"
 
 #include "PIDProfile.h"

@@ -5,8 +5,6 @@ Comments:
 This class defines the PIDProfile, a class that contains all necessary values for PID correction.
 */
 
-#pragma once
-
 class PIDProfile {
     public:
         PIDProfile();

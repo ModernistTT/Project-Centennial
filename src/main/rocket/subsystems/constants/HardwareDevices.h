@@ -1,5 +1,3 @@
-#pragma once
-
 class HardwareDevices   {
     public:
         const int telAltimeterPort = 0;

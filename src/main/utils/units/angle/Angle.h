@@ -1,16 +1,14 @@
-#include "math.h"
-#include <type_traits>
+#include <math.h>
+#include <ArxTypeTraits.h>
 
-#include "Units.h"
+#include "../Unit.h"
 
 struct Degrees {};
 struct Radians {};
 
-template <typename t>
-class Angle : public Units {
-    static_assert(std::is_same<T, Degrees>::value || std::is_same<T, Radians>::value,
-                  "Angle must be of type Degrees or Radians.");
-
+template <typename T>
+class Angle : public Unit {
+    
     public:
         Angle (float value = 0.0f)
             : _value(value) {
@@ -53,7 +51,7 @@ class Angle : public Units {
                 if (_value < 0.0f) {
                     _value += 360.0f;  // Ensure it is between 0 and 360
                 }
-            } else if constexpr (std::is_same<T, Radians>::value) {
+            } else if constexpr (std::is_same<T, Degrees>::value) {
                 // Wrap radians between -π and π
                 _value = fmod(_value, 2 * M_PI);
                 if (_value < -M_PI) {
